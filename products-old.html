@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Complete range of genuine Bajaj spare parts - Engine, Transmission, Braking, Electrical, Suspension, and Body Parts. Authentic products with warranty." />
+  <meta name="keywords" content="Bajaj parts, engine parts, brake pads, clutch plates, transmission, electrical components" />
+  <link rel="manifest" href="manifest.json" />
+  <title>Bajaj Spare Parts Catalog | Sankar Motors</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 5px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    header p {
+      font-size: 1.1em;
+      opacity: 0.95;
+    }
+    
+    nav {
+      background: #115e59;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    nav a {
+      color: white;
+      padding: 15px 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    
+    nav a:hover {
+      background: #0f766e;
+      transform: translateY(-2px);
+    }
+    
+    nav a.active {
+      background: #0d5652;
+      border-bottom: 3px solid #14b8a6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+    
+    .card {
+      background: white;
+      padding: 35px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      animation: slideIn 0.5s ease;
+    }
+    
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .card h2 {
+      color: #0f766e;
+      margin-bottom: 15px;
+      font-size: 1.8em;
+      border-bottom: 3px solid #14b8a6;
+      padding-bottom: 10px;
+    }
+    
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+    
+    .product-card {
+      background: linear-gradient(135deg, #ecfeff 0%, #d4f9f7 100%);
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      border-left: 5px solid #14b8a6;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, transparent 100%);
+      transition: top 0.3s ease;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 16px 32px rgba(15, 118, 110, 0.2);
+    }
+    
+    .product-card:hover::before {
+      top: 0;
+    }
+    
+    .product-icon {
+      font-size: 3em;
+      margin-bottom: 10px;
+      animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    
+    .product-card h3 {
+      color: #0f766e;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .product-card ul {
+      text-align: left;
+      list-style: none;
+      margin-top: 15px;
+      color: #333;
+      line-height: 2;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .product-card li::before {
+      content: "✓ ";
+      color: #14b8a6;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+    
+    .cta-button {
+      background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+      margin-top: 15px;
+      display: inline-block;
+      box-shadow: 0 4px 8px rgba(15, 118, 110, 0.2);
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(15, 118, 110, 0.3);
+    }
+    
+    .product-card[style*="display: none"] {
+      animation: none !important;
+    }
+    
+    .product-card {
+      animation: fadeInUp 0.5s ease;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+    }
+
+      @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      
+      nav {
+        flex-direction: column;
+      }
+      
+      nav a {
+        border-bottom: 1px solid #0d5652;
+      }
+      
+      .card {
+        padding: 20px;
+      }
+      
+      .two-col-section {
+        grid-template-columns: 1fr;
+      }
+      
+      .image-section img {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🏍️ SANKAR MOTORS</h1>
+  <p>Genuine Bajaj Two-Wheeler Spare Parts</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="products.html" class="active">Products</a>
+  <a href="order.html">Order Now</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+  <div class="image-section">
+    <img src="https://images.unsplash.com/photo-1486611342519-cd4628902d4a?w=1200&h=400&fit=crop" alt="Spare Parts" />
+  </div>
+
+  <div class="card">
+    <h2>Our Products</h2>
+    <p>We offer a comprehensive range of genuine Bajaj spare parts for all models. All products are authentic and come with quality assurance. From engine components to body parts, we have everything to keep your bike running smoothly.</p>
+  </div>
+
+  <div class="card">
+    <h2>Product Categories</h2>
+    <div class="products-grid">
+      
+      <div class="product-card">
+        <div class="product-icon">⚙️</div>
+        <h3>Engine Parts</h3>
+        <ul>
+          <li>Pistons & Rings</li>
+          <li>Gaskets</li>
+          <li>Valve Components</li>
+          <li>Cylinders</li>
+        </ul>
+        <button class="cta-button" onclick="window.location.href='order.html'">Order →</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🔗</div>
+        <h3>Transmission</h3>
+        <ul>
+          <li>Clutch Plates</li>
+          <li>Chains & Sprockets</li>
+          <li>Gears</li>
+          <li>Bearings</li>
+        </ul>
+        <button class="cta-button" onclick="window.location.href='order.html'">Order →</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🛑</div>
+        <h3>Braking System</h3>
+        <ul>
+          <li>Brake Pads</li>
+          <li>Brake Shoes</li>
+          <li>Brake Cables</li>
+          <li>Brake Fluid</li>
+        </ul>
+        <button class="cta-button" onclick="window.location.href='order.html'">Order →</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">⚡</div>
+        <h3>Electrical</h3>
+        <ul>
+          <li>Batteries</li>
+          <li>CDI Units</li>
+          <li>Wiring Harness</li>
+          <li>Spark Plugs</li>
+        </ul>
+        <button class="cta-button" onclick="window.location.href='order.html'">Order →</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🔧</div>
+        <h3>Suspension</h3>
+        <ul>
+          <li>Shock Absorbers</li>
+          <li>Fork Seals</li>
+          <li>Springs</li>
+          <li>Dampers</li>
+        </ul>
+        <button class="cta-button" onclick="window.location.href='order.html'">Order →</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🏍️</div>
+        <h3>Body Parts</h3>
+        <ul>
+          <li>Mudguards</li>
+          <li>Seats & Covers</li>
+          <li>Side Panels</li>
+          <li>Bumpers</li>
+        </ul>
+        <button class="cta-button" onclick="window.location.href='order.html'">Order →</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🔌</div>
+        <h3>Fuel System</h3>
+        <ul>
+          <li>Carburetors</li>
+          <li>Fuel Filters</li>
+          <li>Fuel Lines</li>
+          <li>Petcock Valves</li>
+        </ul>
+        <button class="cta-button" onclick="window.location.href='order.html'">Order →</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🎯</div>
+        <h3>Accessories</h3>
+        <ul>
+          <li>Mirrors</li>
+          <li>Grips</li>
+          <li>Cables & Wires</li>
+          <li>Fasteners</li>
+        </ul>
+        <button class="cta-button" onclick="window.location.href='order.html'">Order →</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="two-col-section">
+      <img src="https://images.unsplash.com/photo-1486611342519-cd4628902d4a?w=400&h=400&fit=crop" alt="Quality Motorcycle Components" />
+      <div>
+        <h2>Quality Guarantee</h2>
+        <p><strong>We stand behind every product we sell!</strong></p>
+        <ul class="feature-list">
+          <li>100% genuine Bajaj parts</li>
+          <li>Thoroughly inspected items</li>
+          <li>Competitive pricing</li>
+          <li>Fast and reliable delivery</li>
+          <li>Expert support included</li>
+          <li>Full warranty coverage</li>
+        </ul>
+        <button style="width: auto; display: inline-block; margin-top: 20px; padding: 10px 25px;" onclick="window.location.href='order.html'">Start Ordering →</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div style="margin-bottom: 20px;">
+    <strong>© 2026 Sankar Motors</strong><br/>
+    <span style="font-size: 0.9em;">Quality Spare Parts • Expert Service • Genuine Products</span>
+  </div>
+  <div style="border-top: 1px solid #444; padding-top: 15px; font-size: 0.85em;">
+    <p>🏍️ All Bajaj Models Supported | 📞 +91 98491 61111 | 💬 WhatsApp Us</p>
+    <p>Guntur, Andhra Pradesh | India</p>
+  </div>
+</footer>
+
+<script src="common.js"></script>
+
+</body>
+</html>
+

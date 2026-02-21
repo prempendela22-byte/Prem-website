@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sankar Motors - Genuine Bajaj Two-Wheeler Spare Parts in Guntur. 50+ years of trust, authentic parts, fast delivery. Order online via WhatsApp." />
+  <meta name="keywords" content="Bajaj spare parts, motorcycle parts, Guntur, two-wheeler, pulsar, discover, avenger" />
+  <meta name="author" content="Sankar Motors" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Sankar Motors | Genuine Bajaj Spare Parts" />
+  <meta property="og:description" content="50+ years of trusted Bajaj spare parts service in Guntur. Genuine products, expert advice, fast delivery." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourusername.github.io/prem-website/" />
+  <meta name="theme-color" content="#0f766e" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Sankar Motors | Genuine Bajaj Spare Parts - 50 Years Trust</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --primary-color: #0f766e;
+      --secondary-color: #14b8a6;
+      --dark-color: #115e59;
+      --light-color: #ecfeff;
+      --text-color: #333;
+      --border-color: #e0e0e0;
+      --success-color: #10b981;
+      --error-color: #ef4444;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      animation: slideDown 0.6s ease;
+    }
+    
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 5px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    header p {
+      font-size: 1.1em;
+      opacity: 0.95;
+    }
+    
+    .tagline {
+      font-size: 0.9em;
+      opacity: 0.85;
+      margin-top: 5px;
+    }
+    
+    nav {
+      background: var(--dark-color);
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    nav a {
+      color: white;
+      padding: 15px 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+      position: relative;
+    }
+    
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: var(--secondary-color);
+      transition: width 0.3s ease;
+    }
+    
+    nav a:hover {
+      background: var(--primary-color);
+      transform: translateY(-2px);
+    }
+    
+    nav a:hover::after {
+      width: 100%;
+    }
+    
+    nav a.active {
+      background: #0d5652;
+      border-bottom: 3px solid var(--secondary-color);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+    
+    .card {
+      background: white;
+      padding: 35px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      animation: slideIn 0.5s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+    
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .card h2 {
+      color: #0f766e;
+      margin-bottom: 15px;
+      font-size: 1.8em;
+      border-bottom: 3px solid #14b8a6;
+      padding-bottom: 10px;
+    }
+    
+    .card h3 {
+      color: #115e59;
+      margin-top: 15px;
+    }
+    
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+    
+    .service-box {
+      background: linear-gradient(135deg, #ecfeff 0%, #d4f9f7 100%);
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+      border-left: 5px solid #14b8a6;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .service-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .service-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(15, 118, 110, 0.2);
+    }
+    
+    .service-box:hover::before {
+      opacity: 1;
+    }
+    
+    .service-box h3 {
+      color: #0f766e;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .service-box p {
+      color: #666;
+      font-size: 0.95em;
+      position: relative;
+      z-index: 1;
+    }
+
+    .image-section {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    
+    .image-section img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+    
+    .testimonial-card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-top: 4px solid #14b8a6;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .testimonial-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(20, 184, 166, 0.05) 0%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+    
+    .testimonial-card:hover::before {
+      opacity: 1;
+    }
+    
+    .stars {
+      color: #fbbf24;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+    
+    .testimonial-card p {
+      color: #666;
+      font-style: italic;
+      margin-bottom: 15px;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .testimonial-author {
+      color: #0f766e;
+      font-weight: 600;
+      font-size: 0.9em;
+      position: relative;
+      z-index: 1;
+    }
+
+    .two-col-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+      margin: 30px 0;
+    }
+    
+    .two-col-section img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e0e0e0;
+      padding: 20px 0;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      color: #0f766e;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      padding: 10px;
+      margin: -10px;
+      border-radius: 6px;
+    }
+    
+    .faq-question:hover {
+      color: #14b8a6;
+      background: rgba(20, 184, 166, 0.05);
+      padding-left: 15px;
+    }
+    
+    .faq-toggle {
+      font-size: 1.5em;
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+    
+    .faq-answer {
+      display: none;
+      margin-top: 15px;
+      color: #666;
+      line-height: 1.7;
+      padding: 15px;
+      background: rgba(20, 184, 166, 0.05);
+      border-left: 4px solid #14b8a6;
+      border-radius: 4px;
+      animation: slideDown 0.3s ease;
+    }
+    
+    .faq-answer.active {
+      display: block;
+    }
+    
+    .faq-toggle.active {
+      transform: rotate(180deg);
+    }
+
+    .guarantee-badges {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin: 25px 0;
+    }
+    
+    .badge {
+      background: linear-gradient(135deg, #fef3c7 0%, #fef08a 100%);
+      border: 2px solid #f59e0b;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      color: #92400e;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .badge::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .badge:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(245, 158, 11, 0.2);
+    }
+    
+    .badge:hover::before {
+      opacity: 1;
+    }
+    
+    .badge h4 {
+      margin: 0 0 8px 0;
+      font-size: 1.2em;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .badge p {
+      margin: 0;
+      font-size: 0.85em;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      .two-col-section {
+        grid-template-columns: 1fr;
+      }
+      
+      .image-section img {
+        height: 250px;
+      }
+    }
+    
+    .part-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    
+    .part-row input[type="text"] {
+      flex: 3;
+    }
+    
+    .part-row input[type="number"] {
+      flex: 1;
+    }
+    
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 2px solid #e0e0e0;
+      border-radius: 6px;
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+    }
+    
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #14b8a6;
+      box-shadow: 0 0 5px rgba(20, 184, 166, 0.3);
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+      font-weight: 600;
+      font-size: 0.95em;
+    }
+    
+    button {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1em;
+      transition: all 0.3s ease;
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 8px rgba(15, 118, 110, 0.2);
+    }
+    
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(15, 118, 110, 0.3);
+    }
+    
+    button:active {
+      transform: translateY(-1px);
+    }
+    
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, rgba(15, 118, 110, 0.9) 0%, rgba(20, 184, 166, 0.9) 100%),
+                  url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><circle cx="200" cy="150" r="100" opacity="0.1" fill="white"/><circle cx="1000" cy="500" r="150" opacity="0.1" fill="white"/></svg>');
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      animation: slideIn 0.6s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero button {
+      background: white;
+      color: #0f766e;
+      padding: 12px 30px;
+      font-weight: 700;
+      display: inline-block;
+      width: auto;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero button:hover {
+      background: #f0f0f0;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    
+    .stat-box {
+      background: white;
+      padding: 25px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      border-top: 4px solid #14b8a6;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .stat-box::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .stat-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(15, 118, 110, 0.15);
+    }
+    
+    .stat-box:hover::after {
+      opacity: 1;
+    }
+    
+    .stat-box h3 {
+      font-size: 2.5em;
+      color: #0f766e;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+      font-weight: 700;
+    }
+    
+    .stat-box p {
+      color: #666;
+      font-weight: 600;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      
+      nav {
+        flex-direction: column;
+      }
+      
+      nav a {
+        border-bottom: 1px solid #0d5652;
+        text-align: center;
+      }
+      
+      .card {
+        padding: 20px;
+      }
+      
+      .hero h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🏍️ SANKAR MOTORS</h1>
+  <p>Genuine Bajaj Two-Wheeler Spare Parts</p>
+  <p class="tagline">✓ 50+ Years of Trust • 100% Genuine • Fast Delivery</p>
+</header>
+
+<nav>
+  <a href="index.html" class="active">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="products.html">Products</a>
+  <a href="order.html">Order Now</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+  <div class="hero">
+    <h1>Welcome to Sankar Motors</h1>
+    <p>Your trusted source for authentic Bajaj two-wheeler spare parts</p>
+    <button onclick="window.location.href='order.html'">Order Now</button>
+  </div>
+
+  <div class="image-section">
+    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=400&fit=crop" alt="Bajaj Motorcycles" />
+  </div>
+
+  <div class="stats">
+    <div class="stat-box">
+      <h3>50+</h3>
+      <p>Years of Service</p>
+    </div>
+    <div class="stat-box">
+      <h3>100%</h3>
+      <p>Genuine Parts</p>
+    </div>
+    <div class="stat-box">
+      <h3>⚡ Fast</h3>
+      <p>Delivery</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="two-col-section">
+      <div>
+        <h2>Welcome to Sankar Motors</h2>
+        <p>Located in Guntur, Sankar Motors has been serving Bajaj motorcycle and scooter enthusiasts for over 50 years. We provide genuine spare parts at competitive prices with expert guidance.</p>
+        <p style="margin-top: 15px;">Our commitment is to deliver quality products and exceptional customer service. Whether you need engine parts, brake systems, or body components, we have everything you need.</p>
+        <button style="width: auto; display: inline-block; margin-top: 15px; padding: 10px 25px;" onclick="window.location.href='about.html'">Learn More About Us →</button>
+      </div>
+      <img src="https://images.unsplash.com/photo-1599748236585-6f5ee275583e?w=400&h=400&fit=crop" alt="Motorcycle Engine Parts" />
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Why Choose Us?</h2>
+    <div class="services">
+      <div class="service-box">
+        <h3>✓ Genuine Parts</h3>
+        <p>Only authentic Bajaj spare parts</p>
+      </div>
+      <div class="service-box">
+        <h3>✓ Expert Advice</h3>
+        <p>Professional guidance for your needs</p>
+      </div>
+      <div class="service-box">
+        <h3>✓ Fast Delivery</h3>
+        <p>Quick dispatch and delivery</p>
+      </div>
+      <div class="service-box">
+        <h3>✓ Best Prices</h3>
+        <p>Competitive rates guaranteed</p>
+      </div>
+      <div class="service-box">
+        <h3>✓ Online Orders</h3>
+        <p>Easy ordering via WhatsApp</p>
+      </div>
+      <div class="service-box">
+        <h3>✓ 50+ Years Trust</h3>
+        <p>Established reputation</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>⭐ What Our Customers Say</h2>
+    <div class="testimonials">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Excellent quality parts and very quick delivery. Highly recommended for all Bajaj owners!"</p>
+        <div class="testimonial-author">- Rajesh Kumar</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Best prices in town and genuine products. The staff is very helpful and knowledgeable."</p>
+        <div class="testimonial-author">- Priya Sharma</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"50 years of trust is not for nothing. They deliver exactly what they promise!"</p>
+        <div class="testimonial-author">- Vikram Singh</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="two-col-section">
+      <img src="https://images.unsplash.com/photo-1486611342519-cd4628902d4a?w=400&h=400&fit=crop" alt="Bike Repair Service" />
+      <div>
+        <h2>Premium Customer Support</h2>
+        <p><strong>We're here to help you every step of the way!</strong></p>
+        <ul style="line-height: 2; margin-top: 15px; color: #333;">
+          <li>✓ Expert technical support</li>
+          <li>✓ WhatsApp order assistance</li>
+          <li>✓ Fast response time</li>
+          <li>✓ Friendly & knowledgeable staff</li>
+          <li>✓ Warranty on all products</li>
+        </ul>
+        <button style="width: auto; display: inline-block; margin-top: 20px; padding: 10px 25px;" onclick="window.location.href='contact.html'">Contact Us →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>❓ Frequently Asked Questions</h2>
+    <div class="faq-section">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>How do I place an order?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">Visit our "Order Now" page, fill in your details and the spare parts you need, then click "Send Order via WhatsApp". Our team will confirm your order immediately!</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>Are all parts genuine Bajaj products?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">Yes! We guarantee 100% authentic Bajaj spare parts. We have been in business for over 50 years and maintain direct relationships with Bajaj suppliers.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>How long does delivery take?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">Delivery usually takes 3-5 business days depending on your location. We provide tracking information via WhatsApp.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>Do you provide warranty on products?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">Yes, all parts come with manufacturer's warranty. We also provide after-sales support for any issues.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>Can I return or exchange parts?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">Yes! If the part is defective or damaged, we accept returns within 7 days. Contact us via WhatsApp for easy processing.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>What are your business hours?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">We're open Monday to Saturday, 9:00 AM to 8:00 PM. Sunday 10:00 AM to 2:00 PM. Holiday enquiries can be handled via WhatsApp.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div style="margin-bottom: 20px;">
+    <strong>© 2026 Sankar Motors</strong><br/>
+    <span style="font-size: 0.9em;">Quality Spare Parts • Expert Service • 50+ Years Trust</span>
+  </div>
+  <div style="border-top: 1px solid #444; padding-top: 15px; font-size: 0.85em;">
+    <p>🏍️ Genuine Bajaj Spare Parts | 📞 +91 98491 61111 | 💬 WhatsApp Us</p>
+    <p>Guntur, Andhra Pradesh | India</p>
+  </div>
+</footer>
+
+<script src="common.js"></script>
+
+<script>
+function toggleFAQ(element) {
+  const answer = element.nextElementSibling;
+  const toggle = element.querySelector('.faq-toggle');
+  answer.classList.toggle('active');
+  toggle.classList.toggle('active');
+}
+
+function addNewRow(e) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    const row = document.createElement("div");
+    row.className = "part-row";
+    row.innerHTML = `
+      <input type="text" placeholder="Part name" onkeydown="addNewRow(event)">
+      <input type="number" placeholder="Qty" min="1">
+    `;
+    document.getElementById("partsContainer").appendChild(row);
+    row.querySelector("input").focus();
+  }
+}
+
+function sendWhatsApp() {
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let a1 = document.getElementById("address1").value;
+  let a2 = document.getElementById("address2").value;
+
+  let parts = "";
+  let i = 1;
+  document.querySelectorAll(".part-row").forEach(r => {
+    let p = r.children[0].value;
+    let q = r.children[1].value;
+    if (p && q) {
+      parts += `\n${i}. ${p} - Qty ${q}`;
+      i++;
+    }
+  });
+
+  let msg =
+`🤖 SANKAR MOTORS BOT
+
+Customer: ${name}
+Phone: ${phone}
+
+Order:${parts}
+
+Address:
+${a1}
+${a2}`;
+
+  window.open("https://wa.me/91XXXXXXXXXX?text=" + encodeURIComponent(msg), "_blank");
+}
+</script>
+
+</body>
+</html>

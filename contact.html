@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Contact Sankar Motors - Genuine Bajaj spare parts. WhatsApp, phone, email, or visit us in Guntur." />
+  <title>Contact Us | Sankar Motors</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #0f766e;
+      --secondary: #14b8a6;
+      --dark: #0d4f4a;
+      --text: #1f2937;
+      --text-light: #6b7280;
+      --border: #e5e7eb;
+      --success: #10b981;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #f0fdf4 0%, #f0f9ff 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      animation: slideInDown 0.8s ease;
+    }
+
+    header h1 {
+      font-size: 2em;
+      margin-bottom: 3px;
+      animation: fadeInUp 0.8s ease 0.2s both;
+    }
+
+    header p {
+      font-size: 0.9em;
+      opacity: 0.9;
+      animation: fadeInUp 0.8s ease 0.4s both;
+    }
+
+    nav {
+      background: var(--dark);
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+      border-bottom: 3px solid transparent;
+      position: relative;
+    }
+
+    nav a::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.4s ease;
+    }
+
+    nav a:hover::before,
+    nav a.active::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: var(--primary);
+      border-bottom-color: transparent;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .page-title {
+      text-align: center;
+      margin-bottom: 50px;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .page-title h2 {
+      font-size: 2.2em;
+      color: var(--primary);
+      margin-bottom: 10px;
+      animation: slideInDown 0.8s ease 0.2s both;
+    }
+
+    .page-title p {
+      font-size: 1.1em;
+      color: var(--text-light);
+      animation: fadeInUp 0.8s ease 0.4s both;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    /* ===== CONTACT INFO ===== */
+    .contact-info-section {
+      background: white;
+      padding: 35px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      animation: slideInLeft 0.8s ease 0.4s both;
+    }
+
+    .contact-info-section h3 {
+      font-size: 1.6em;
+      color: var(--primary);
+      margin-bottom: 25px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--secondary);
+    }
+
+    .contact-item {
+      margin-bottom: 25px;
+      display: flex;
+      gap: 15px;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .contact-info-section .contact-item:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+
+    .contact-info-section .contact-item:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    .contact-info-section .contact-item:nth-child(4) {
+      animation-delay: 0.7s;
+    }
+
+    .contact-icon {
+      font-size: 2em;
+      min-width: 40px;
+      text-align: center;
+    }
+
+    .contact-content h4 {
+      color: var(--primary);
+      font-size: 1.1em;
+      margin-bottom: 5px;
+    }
+
+    .contact-content p {
+      color: var(--text-light);
+      font-size: 0.95em;
+    }
+
+    .contact-content a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .contact-content a:hover {
+      color: var(--primary);
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 12px;
+      margin-top: 30px;
+      flex-direction: column;
+      animation: slideInRight 0.8s ease 0.5s both;
+    }
+
+    .cta-btn {
+      padding: 14px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      font-size: 0.95em;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .cta-buttons .cta-btn:nth-child(1) {
+      animation-delay: 0.6s;
+    }
+
+    .cta-buttons .cta-btn:nth-child(2) {
+      animation-delay: 0.7s;
+    }
+
+    .cta-btn::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+      pointer-events: none;
+    }
+
+    .cta-btn:active::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: white;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1da851;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-phone {
+      background: var(--secondary);
+      color: white;
+    }
+
+    .btn-phone:hover {
+      background: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
+    }
+
+    /* ===== CONTACT FORM ===== */
+    .form-section {
+      background: white;
+      padding: 35px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      animation: slideInRight 0.8s ease 0.4s both;
+    }
+
+    .form-section h3 {
+      font-size: 1.6em;
+      color: var(--primary);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--secondary);
+      animation: slideInLeft 0.8s ease 0.5s both;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .form-section .form-group:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+
+    .form-section .form-group:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    .form-section .form-group:nth-child(4) {
+      animation-delay: 0.7s;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.95em;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 0.95em;
+      font-family: inherit;
+      transition: all 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.1);
+      background: linear-gradient(135deg, rgba(240, 253, 244, 0.5), rgba(240, 249, 255, 0.5));
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-submit {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 13px 25px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 1em;
+      transition: all 0.3s ease;
+      width: 100%;
+      margin-top: 10px;
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 0.8s ease 0.8s both;
+    }
+
+    .form-submit::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+      pointer-events: none;
+    }
+
+    .form-submit:active::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    .form-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);
+    }
+
+    .success-msg {
+      background: #dcfce7;
+      color: #166534;
+      padding: 12px 15px;
+      border-left: 4px solid var(--success);
+      border-radius: 4px;
+      margin-bottom: 15px;
+      display: none;
+      animation: slideInDown 0.5s ease;
+    }
+
+    .success-msg.show {
+      display: block;
+    }
+
+    /* ===== FAQ SECTION ===== */
+    .faq-section {
+      background: white;
+      padding: 35px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      margin-bottom: 50px;
+      animation: fadeInUp 0.8s ease 0.6s both;
+    }
+
+    .faq-section h3 {
+      font-size: 1.6em;
+      color: var(--primary);
+      margin-bottom: 25px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--secondary);
+      animation: slideInLeft 0.8s ease 0.7s both;
+    }
+
+    .faq-item {
+      margin-bottom: 15px;
+      border-left: 3px solid var(--secondary);
+      padding-left: 20px;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .faq-section .faq-item:nth-child(2) {
+      animation-delay: 0.8s;
+    }
+
+    .faq-section .faq-item:nth-child(3) {
+      animation-delay: 0.9s;
+    }
+
+    .faq-section .faq-item:nth-child(4) {
+      animation-delay: 1s;
+    }
+
+    .faq-item strong {
+      color: var(--primary);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .faq-item p {
+      color: var(--text-light);
+      font-size: 0.95em;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 80px;
+      font-size: 0.9em;
+      opacity: 0.9;
+      animation: slideInDown 0.8s ease 1s both;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    /* ===== TOUCH OPTIMIZATION ===== */
+    @media (hover: none) and (pointer: coarse) {
+
+      /* Disable hover effects on touch devices */
+      .cta-btn:hover {
+        transform: none;
+      }
+
+      /* Ensure buttons are touch-friendly */
+      .cta-btn,
+      button,
+      .form-submit {
+        min-height: 44px;
+        padding: 12px 18px;
+      }
+
+      /* Reduce animation delays */
+      * {
+        animation-delay: 0s !important;
+      }
+
+      /* Improve tap target size */
+      nav a {
+        padding: 14px 16px;
+        min-height: 44px;
+      }
+
+      /* Increase input field height for easier touch */
+      input,
+      select,
+      textarea {
+        padding: 13px 12px;
+        min-height: 44px;
+      }
+
+      /* Reduce motion for touch devices */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px;
+      }
+
+      header h1 {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+      }
+
+      header p {
+        font-size: 0.85em;
+      }
+
+      nav a {
+        padding: 10px 12px;
+        font-size: 0.8em;
+      }
+
+      .container {
+        padding: 15px;
+        margin: 30px auto;
+      }
+
+      .page-title {
+        margin-bottom: 30px;
+      }
+
+      .page-title h2 {
+        font-size: 1.5em;
+        margin-bottom: 8px;
+      }
+
+      .page-title p {
+        font-size: 0.95em;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .contact-info-section {
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .contact-info-section h3 {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+      }
+
+      .contact-item {
+        margin-bottom: 20px;
+        gap: 12px;
+      }
+
+      .contact-icon {
+        font-size: 1.6em;
+        min-width: 30px;
+      }
+
+      .contact-content h4 {
+        font-size: 1em;
+        margin-bottom: 3px;
+      }
+
+      .contact-content p {
+        font-size: 0.9em;
+      }
+
+      .contact-content a {
+        font-size: 0.9em;
+      }
+
+      .cta-buttons {
+        gap: 10px;
+        margin-top: 20px;
+        flex-direction: column;
+      }
+
+      .cta-btn {
+        padding: 12px 18px;
+        font-size: 0.9em;
+        width: 100%;
+      }
+
+      .form-section {
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .form-section h3 {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+      }
+
+      .form-group {
+        margin-bottom: 12px;
+      }
+
+      label {
+        font-size: 0.9em;
+        margin-bottom: 5px;
+      }
+
+      input,
+      textarea,
+      select {
+        padding: 11px 12px;
+        font-size: 16px;
+      }
+
+      .form-submit {
+        padding: 12px 20px;
+        font-size: 0.95em;
+      }
+
+      .faq-section {
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+      }
+
+      .faq-section h3 {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+      }
+
+      .faq-item {
+        margin-bottom: 12px;
+        padding-left: 15px;
+        border-left: 3px solid var(--secondary);
+      }
+
+      .faq-item strong {
+        font-size: 0.95em;
+        margin-bottom: 4px;
+      }
+
+      .faq-item p {
+        font-size: 0.9em;
+      }
+
+      footer {
+        padding: 20px;
+        font-size: 0.85em;
+        margin-top: 50px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.2em;
+      }
+
+      header p {
+        font-size: 0.75em;
+      }
+
+      nav a {
+        padding: 8px 10px;
+        font-size: 0.7em;
+      }
+
+      .container {
+        padding: 12px;
+        margin: 20px auto;
+      }
+
+      .page-title h2 {
+        font-size: 1.2em;
+      }
+
+      .page-title p {
+        font-size: 0.9em;
+      }
+
+      .contact-info-section {
+        padding: 15px;
+      }
+
+      .contact-info-section h3 {
+        font-size: 1.1em;
+      }
+
+      .contact-item {
+        margin-bottom: 15px;
+        gap: 10px;
+      }
+
+      .contact-icon {
+        font-size: 1.4em;
+        min-width: 28px;
+      }
+
+      .contact-content h4 {
+        font-size: 0.95em;
+      }
+
+      .contact-content p {
+        font-size: 0.85em;
+      }
+
+      .cta-buttons {
+        gap: 8px;
+        margin-top: 15px;
+      }
+
+      .cta-btn {
+        padding: 10px 15px;
+        font-size: 0.85em;
+      }
+
+      .form-section {
+        padding: 15px;
+      }
+
+      .form-section h3 {
+        font-size: 1.1em;
+      }
+
+      label {
+        font-size: 0.85em;
+      }
+
+      input,
+      textarea,
+      select {
+        padding: 10px;
+        font-size: 15px;
+      }
+
+      .form-submit {
+        padding: 10px 16px;
+        font-size: 0.9em;
+      }
+
+      .faq-section {
+        padding: 15px;
+      }
+
+      .faq-section h3 {
+        font-size: 1.1em;
+      }
+
+      .faq-item {
+        margin-bottom: 10px;
+        padding-left: 12px;
+      }
+
+      .faq-item strong {
+        font-size: 0.9em;
+      }
+
+      .faq-item p {
+        font-size: 0.85em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🏍️ SANKAR MOTORS</h1>
+    <p>Get In Touch With Us</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="order.html">Order</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="page-title">
+      <h2>Contact Sankar Motors</h2>
+      <p>We're here to help. Get in touch with us anytime.</p>
+    </div>
+
+    <div class="content-grid">
+      <!-- Contact Info -->
+      <div class="contact-info-section">
+        <h3>📞 Get In Touch</h3>
+
+        <div class="contact-item">
+          <div class="contact-icon">📱</div>
+          <div class="contact-content">
+            <h4>WhatsApp</h4>
+            <p><a href="https://wa.me/919849161111">+91 98491 61111</a></p>
+            <p>For orders & quick support</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">☎️</div>
+          <div class="contact-content">
+            <h4>Phone</h4>
+            <p><a href="tel:+919849161111">+91 98491 61111</a></p>
+            <p>During business hours</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-content">
+            <h4>Location</h4>
+            <p>Guntur, Andhra Pradesh, India</p>
+            <p>Shop address available on WhatsApp</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">⏰</div>
+          <div class="contact-content">
+            <h4>Availability</h4>
+            <p>Mon–Sat: 9:30 AM – 9:00 PM</p>
+            <p>Sunday: 10:30 AM – 1:00 PM</p>
+          </div>
+        </div>
+
+        <div class="cta-buttons">
+          <a href="https://wa.me/919849161111" class="cta-btn btn-whatsapp">💬 Message on WhatsApp</a>
+          <a href="tel:+919849161111" class="cta-btn btn-phone">☎️ Call Now</a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="form-section">
+        <h3>✉️ Send Message</h3>
+        <div class="success-msg" id="successMsg">
+          ✓ Thank you! We'll get back to you soon.
+        </div>
+
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Your full name" />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="10-digit number" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <select id="subject" name="subject" required>
+              <option value="">-- Select Subject --</option>
+              <option value="Spare Parts Inquiry">Spare Parts Inquiry</option>
+              <option value="Order Status">Order Status</option>
+              <option value="Service Request">Service Request</option>
+              <option value="General Inquiry">General Inquiry</option>
+              <option value="Complaint">Complaint</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required placeholder="Your message..."></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">📧 Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-section">
+      <h3>❓ Frequently Asked Questions</h3>
+
+      <div class="faq-item">
+        <strong>How do I place an order?</strong>
+        <p>Visit our Order page, fill in your details and bike information, select the parts you need, and send the
+          order via WhatsApp. Our team will respond with payment details and confirmation.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Do you deliver outside Guntur?</strong>
+        <p>Yes! We deliver to nearby areas. Contact us via WhatsApp with your location for delivery details and charges.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Are your parts genuine?</strong>
+        <p>Absolutely! 100% genuine Bajaj parts. All our products come with original packaging and warranty from Bajaj.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <strong>What payment methods do you accept?</strong>
+        <p>We accept Google Pay (UPI), phone payments, and bank transfers. Payment details are sent after order
+          confirmation.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>How long does delivery take?</strong>
+        <p>Most parts are available for same-day or next-day delivery. Delivery time depends on your location and stock
+          availability.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Can you help me identify which parts I need?</strong>
+        <p>Yes! Share your bike model and issue via WhatsApp, and our experts will recommend the right parts for you.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Is there a warranty on parts?</strong>
+        <p>All genuine Bajaj parts come with the manufacturer's standard warranty. Contact us for details specific to
+          the part you need.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>What if I need emergency service?</strong>
+        <p>Contact us on WhatsApp and we'll do our best to help quickly. We can arrange fast delivery for urgent needs
+          during business hours.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p><strong>🏍️ Sankar Motors</strong></p>
+    <p>Genuine Bajaj Spare Parts | Guntur, Andhra Pradesh</p>
+    <p>WhatsApp: +91 98491 61111</p>
+    <p>&copy; 2026 Sankar Motors. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const email = document.getElementById("email").value;
+      const subject = document.getElementById("subject").value;
+      const message = document.getElementById("message").value;
+
+      // Send via WhatsApp
+      const whatsappMsg = `Hi Sankar Motors,\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`;
+      const waUrl = "https://wa.me/919849161111?text=" + encodeURIComponent(whatsappMsg);
+
+      window.open(waUrl, "_blank");
+
+      // Show success message
+      document.getElementById("successMsg").style.display = "block";
+      document.getElementById("contactForm").reset();
+
+      setTimeout(() => {
+        document.getElementById("successMsg").style.display = "none";
+      }, 5000);
+    }
+  </script>
+
+</body>
+
+</html>
