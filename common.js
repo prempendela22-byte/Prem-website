@@ -82,7 +82,7 @@ function scrollToSection(sectionId) {
  * Open WhatsApp chat
  */
 function openWhatsApp(message = '') {
-  const phoneNumber = '919849161111';
+  const phoneNumber = '919246485044';
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
   window.open(whatsappUrl, '_blank');
